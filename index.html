@@ -9,6 +9,10 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dp.css">
 </head>
 <style>
     #container {
@@ -70,6 +74,13 @@
 
     </p>
 </figure>
+<div class="footer-div">
+    <div class="footer-div-2">
+        <input type="text" id="twitter-search-input">
+        <button id="twitter-search-btn" class="btn btn-light dp-button">Get</button>
+    </div>
+
+</div>
 </body>
 <script>
 
@@ -220,15 +231,30 @@
   }];
 
 
+  const trig_reRender = function () {
+         $('#twitter-search-btn').on('click',function (e){
+             e.preventDefault();
+            let username_ = $('#twitter-search-input').val();
+
+            run(username_);
+
+         })
+
+
+
+      };
+
+
 
 
   $(document).ready(function() {
     // run();
-    let username = window.location.search.substring(1);
-    if (username.length < 5) {
-      username = "dwnews"
-    }
-    run(username);
+    // let username = window.location.search.substring(1);
+    // if (username.length < 5) {
+    //   username = "dwnews"
+    // }
+    // run(username);
+      trig_reRender()
   })
 
 </script>

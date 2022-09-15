@@ -1,0 +1,51 @@
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#twitter-search-input {
+    height: 33px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    justify-content: center;
+    display: flex;
+    font-weight: 400 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    align-items: center;
+    cursor: pointer !important;
+    outline: 0 !important;
+    white-space: nowrap !important;
+    border: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    font-size: 14px !important;
+    line-height: normal !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.dp-button {
+    /*color: #fff;*/
+    border: 1px solid #afafaf !important;
+    font-size: 14px;
+    background-color: rgb(234, 234, 234) !important;
+    width: 88px;
+    /*width: 100%;*/
+}
+
+.dp-button:hover {
+    background-color: rgb(199, 198, 198) !important;
+}
+
+.footer-div-2 {
+    display: flex;
+}
