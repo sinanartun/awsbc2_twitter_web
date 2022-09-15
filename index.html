@@ -73,10 +73,10 @@
 </body>
 <script>
 
-  const run = function (driver_name) {
+  const run = function (username) {
 
     $.ajax({
-      url: 'http://34.245.30.35:5000?username=SkyNews',
+      url: 'http://34.245.30.35:5000?username='+username,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -180,7 +180,7 @@
       },
       yAxis: {
         title: {
-          text: 'Million liter'
+          text: 'Count'
         }
       },
       labels: {
@@ -224,7 +224,11 @@
 
   $(document).ready(function() {
     // run();
-    run();
+    let username = window.location.search.substring(1);
+    if (username.length < 5) {
+      username = "dwnews"
+    }
+    run(username);
   })
 
 </script>
